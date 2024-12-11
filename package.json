@@ -3,18 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev:send": "ts-node-dev --respawn --transpile-only src/send.ts",
+    "dev:receive": "ts-node-dev --respawn --transpile-only src/receive.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@azure/identity": "^4.5.0",
     "@azure/service-bus": "^7.9.5",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.6.2"
   }
 }
